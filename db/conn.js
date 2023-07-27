@@ -10,8 +10,8 @@ try {
     sequelize.authenticate();
     console.log('MySQL Authentication');
 }catch(err) {
-    console.log("Erro ao conectar")
     console.log(err);
+    console.log("Erro ao conectar")
 }
 
 module.exports = sequelize
