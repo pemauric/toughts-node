@@ -1,11 +1,7 @@
 const express = require('express');
-
 const router = express.Router();
+const ToughtsController = require('../controllers/ToughtController');
 
-const Tought = require("..models/Tought");
-
-router.get('/', (req, res) => {
-    res.render('home')
-});
+router.get('/', ToughtsController.showAll);
 
 module.exports = router

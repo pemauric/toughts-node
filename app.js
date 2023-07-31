@@ -1,12 +1,19 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
+const conn = require('./db/conn');
+const port = process.env.PORT || 3000 
+
 const FileStore = require('session-file-store')(session);
 const flash = require('express-flash');
 
+const Tought = require('./models/Tought')
+
+const User = require('./models/User');
+
 const toughtsRoutes = require('./routes/tought.routes');
 
-const Tought = require('./models/Tought')
+const ToughtController = require('./controllers/ToughtController');
 
 const app = express();
 
@@ -50,9 +57,22 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use('/', toughtsRoutes)
+app.use('/toughts', toughtsRoutes)
 
+app.get('/', ToughtController.showAll)
 
+conn.
+    sync()
+    /*sync({
+        force: true,
+    })*/
+    .then(() => {
+        app.listen(port, () => {
+        console.log(`Server listening on port ${port}`);
+        console.log('Shut down server press Ctrl+C');
+    });
+})
+    .catch((err) => console.log(err));
 
 
 

@@ -1,7 +1,11 @@
-const { DataTypes } = require('sequelize')
+const User = require('../models/User')
 
-const db = require('../db/conn');
+const Tought = require('../models/Tought')
 
-const Tought = db.define('Tought', {
-    
-});
+module.exports = class ToughtController {
+    static async showAll(req, res) {
+        
+        res.render('toughts/home')
+
+    }
+}

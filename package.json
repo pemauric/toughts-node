@@ -2,10 +2,10 @@
   "name": "toughts.node",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js localhost 3000 || process.env.PORT"
+    "dev": "nodemon app.js localhost:3000 || process.env.PORT"
   },
   "keywords": [],
   "author": "",
