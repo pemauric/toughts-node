@@ -13,6 +13,7 @@ const app = express();
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+
 app.use(express.static('public'));
 
 app.use(express.urlencoded({
@@ -48,12 +49,14 @@ app.use((req, res, next) => {
     
     next()
 })
-app.use('/', toughtsRoutes);
+
+app.use('/', toughtsRoutes)
 
 
-app.get('/', (req, res) => {
-    res.render('home')
-});
+
+
+
+
 
 
 
