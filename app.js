@@ -12,6 +12,7 @@ const Tought = require('./models/Tought')
 const User = require('./models/User');
 
 const toughtsRoutes = require('./routes/tought.routes');
+const authRoutes = require('./routes/auth.routes');
 
 const ToughtController = require('./controllers/ToughtController');
 
@@ -50,7 +51,7 @@ app.use(
 app.use(flash());
 
 app.use((req, res, next) => {
-    if(req.session.useId) {
+    if(req.session.userId) {
         res.locals.session = req.session
     }
     
@@ -58,14 +59,13 @@ app.use((req, res, next) => {
 })
 
 app.use('/toughts', toughtsRoutes)
+app.use('/', authRoutes)
 
 app.get('/', ToughtController.showAll)
 
 conn.
     sync()
-    /*sync({
-        force: true,
-    })*/
+    //sync({force: true})
     .then(() => {
         app.listen(port, () => {
         console.log(`Server listening on port ${port}`);
