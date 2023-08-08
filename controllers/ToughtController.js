@@ -8,4 +8,8 @@ module.exports = class ToughtController {
         res.render('toughts/home')
 
     }
+
+    static async dashboard(req, res) {
+        res.render('toughts/dashboard')
+    }
 }
