@@ -137,3 +137,25 @@ footer span {
     background-color: rgba(192, 192, 192, 0.1);
 }
 
+/* view toughts/create */
+
+.tought-form-container a {
+    color: #f6882d;
+}
+
+.tought-form-container a:hover{
+    color: #d37222;
+}
+
+.tought-form-container h1{
+    margin: 16px 0;
+    margin-bottom: 16px;
+    color: white;
+    border-left: solid 4px #f6882d;
+    padding: 5px 10px 5px 5px;
+}
+
+.tought-form-container form {
+    max-width: 40%;
+    margin-top: 24px;
+}
