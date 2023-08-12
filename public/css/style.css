@@ -219,8 +219,27 @@ footer span {
     
 }
 
+/* view toughts/home*/
+
+.home-header {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    text-align: center;
+}
+
+.home-header span {
+    color: #f6882d;
+}
+
+.home-header p,
+.home-header form{
+    margin-bottom: 20px;
+}
 
 
-
-
-
+.home-header input{
+    border: none;
+    border-bottom: solid 1px white;
+    padding: 8px;
+}
