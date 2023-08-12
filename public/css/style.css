@@ -106,6 +106,7 @@ footer span {
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 16px;
+    border: none;
     
 }
 
@@ -228,6 +229,11 @@ footer span {
     text-align: center;
 }
 
+
+.home-header h1 {
+    margin-bottom: 16px;
+}
+
 .home-header span {
     color: #f6882d;
 }
@@ -238,8 +244,68 @@ footer span {
 }
 
 
-.home-header input{
+.home-header input {
     border: none;
-    border-bottom: solid 1px white;
     padding: 8px;
+    margin-right: 16px;
+}
+
+.home-header input[type="text"] {
+    width: 30%;
+    border-bottom: solid 1px white;
+}
+
+.home-header input::placeholder {
+    color: white;
+}
+
+.order-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto 16px;
+}
+
+.order-container span {
+    font-weight: bold;
+    color: white ;
+}
+
+.order-container form {
+    margin: 0;
+}
+
+.order-container button {
+    margin-bottom: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.order-container i:hover,
+.order-container a:hover {
+    color: #f6882d;
+}
+
+.order-container button,
+.order-container i,
+.order-container a {
+    margin: 0 8px;
+}
+
+.toughts-container figure {
+    border-bottom: #333 1px solid;   
+    padding: 8px;   
+    max-width: 60%;
+    margin: 0 auto 16px;
+}
+
+.toughts-container blockquote {
+    font-style: italic;
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.toughts-container span {
+    color: #f6882d;
 }
